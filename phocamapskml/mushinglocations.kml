@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Mushing Locations</name>
+		<NetworkLink>
+			<name>Mushing Locations</name>
+			<Link>
+				<href>http://mapsengine.google.com/map/u/0/kml?mid=zoUAuC1-BUy8.kdR6kE40JrEM&amp;lid=zoUAuC1-BUy8.kJRij5EWr91M</href>
+			</Link>
+		</NetworkLink>
+	</Document>
+</kml>

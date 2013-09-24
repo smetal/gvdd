@@ -53,8 +53,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/var/www/alerion/logs';
-	public $tmp_path = '/var/www/alerion/tmp';
+	public $log_path = '/var/www/gvdd20/logs';
+	public $tmp_path = '/var/www/gvdd20/tmp';
 	public $lifetime = '60';
 	public $session_handler = 'database';
 	public $MetaRights = '';
