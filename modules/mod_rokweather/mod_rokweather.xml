@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension client="site" method="upgrade" type="module" version="2.5">
+    <name>RokWeather</name>
+    <author>RocketTheme, LLC</author>
+    <creationDate>June 27, 2013</creationDate>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <copyright>(C) 2005 - 2013 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>2.0.2</version>
+    <description>RokWeather is a weather module showing current weather from online Weather Services</description>
+    <files>
+        <filename>install.script.php</filename>
+        <folder>includes</folder>
+        <folder>images</folder>
+        <filename>rokweather.css</filename>
+        <folder>blue</folder>
+        <folder>fields</folder>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>grey</folder>
+        <filename>ajax.php</filename>
+        <folder>lib</folder>
+        <filename module="mod_rokweather">mod_rokweather.php</filename>
+        <filename>RT-LICENSE.php</filename>
+    </files>
+    <scriptfile>install.script.php</scriptfile>
+    <plugins>
+        <plugin>/lib/RokWeatherPlugin.php</plugin>
+    </plugins>
+    <config>
+        <fields name="params">
+            <fieldset addfieldpath="/modules/mod_rokweather/fields" name="basic">
+                <field label="Weather Services" type="break"/>
+                <field default="yahoo" description="ROKWEATHER_DESC_SOURCES" label="ROKWEATHER_LABEL_SOURCES" name="source" type="rokweathersources"/>
+                <field description="" label="" name="source_fields" type="rokweathersourcefields"/>
+                <field label="General Settings" type="break"/>
+                <field default="0" description="ROKWEATHER_DESC_DEFAULT_DEGREE" label="ROKWEATHER_LABEL_DEFAULT_DEGREE" name="default_degree" type="radio">
+                    <option value="1">ROKWEATHER_DEGREES_C</option>
+                    <option value="0">ROKWEATHER_DEGREES_F</option>
+                </field>
+                <field default="1" description="ROKWEATHER_DESC_USER_INTERACTION" label="ROKWEATHER_LABEL_USER_INTERACTION" name="user_interaction" type="radio">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field default="1" description="ROKWEATHER_DESC_UNITS_SWITCH" label="ROKWEATHER_LABEL_UNITS_SWITCH" name="units_switch" type="radio">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field default="0" description="ROKWEATHER_DESC_LOCATION_COOKIE" label="ROKWEATHER_LABEL_LOCATION_COOKIE" name="enable_location_cookie" type="radio">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field default="1" description="ROKWEATHER_DESC_ICON_DISPLAY" label="ROKWEATHER_LABEL_ICON_DISPLAY" name="enable_icon" type="radio">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field default="1" description="ROKWEATHER_DESC_HUMIDITY_DISPLAY" label="ROKWEATHER_LABEL_HUMIDITY_DISPLAY" name="enable_humidity" type="radio">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field default="0" description="ROKWEATHER_DESC_WIND_DISPLAY" label="ROKWEATHER_LABEL_WIND_DISPLAY" name="enable_wind" type="radio">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field default="0" description="ROKWEATHER_DESC_DEFAULT_WINDSPEED" label="ROKWEATHER_LABEL_DEFAULT_WINDSPEED" name="wind_speed" type="radio">
+                    <option value="0">MPH</option>
+                    <option value="1">KPH</option>
+                    <option value="2">KTS</option>
+                </field>
+                <field default="1" description="ROKWEATHER_DESC_FUTURE_FORECASTS" label="ROKWEATHER_LABEL_FUTURE_FORECASTS" name="enable_forecast" type="radio">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" name="moduleclass_sfx" type="text"/>
+
+                <field default="0" name="cache" type="hidden">
+                </field>
+                <field default="1" description="COM_MODULES_FIELD_CACHING_DESC" label="COM_MODULES_FIELD_CACHING_LABEL" name="module_cache" type="list">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field default="900" description="COM_MODULES_FIELD_CACHE_TIME_DESC" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" name="cache_time" type="text"/>
+                <field default="static" name="cachemode" type="hidden">
+                    <option value="static"/>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server name="RocketTheme Update Directory" priority="1" type="collection">http://updates.rockettheme.com/joomla/updates.xml</server>
+    </updateservers>
+</extension>

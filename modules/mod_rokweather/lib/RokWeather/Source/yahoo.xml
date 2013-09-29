@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <subfields name="rokweather-sources">
+        <fieldset name="yahoo" addfieldpath="/modules/mod_rokweather/fields">
+            <field name="spacer" type="break" default=""
+                   label="Yahoo Settings"
+                   description="" class="source yahoo"/>
+            <field name="yahoo_default_location" type="text" default="Golden, CO"
+                   label="ROKWEATHER_YAHOO_LABEL_DEFAULT_LOCATION" description="ROKWEATHER_YAHOO_DESC_DEFAULT_LOCATION"
+                   class="source yahoo"/>
+            <field name="yahoo_location_override" type="text" default=""
+                   label="ROKWEATHER_YAHOO_LABEL_LOCATION_DISPLAY_OVERRIDE"
+                   description="ROKWEATHER_YAHOO_DESC_LOCATION_DISPLAY_OVERRIDE" class="source yahoo"/>
+            <field name="cookiesinfoyahoo" type="message"
+                   label="* If you have cookies enabled; Cookies must be cleared for the changes to take effect."
+                   default="" description="" class="source yahoo rok-message-notice"/>
+            <field name="yahoo_forecast_show" type="list" default="2" label="ROKWEATHER_LABEL_FORECASTS_SHOWN"
+                   description="ROKWEATHER_DESC_FORECASTS_SHOWN" class="source yahoo">
+                <option value="1">ROKWEATHER_DEGREES_DAYS_1</option>
+                <option value="2">ROKWEATHER_DEGREES_DAYS_2</option>
+            </field>
+        </fieldset>
+    </subfields>
+</form>

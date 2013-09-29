@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <subfields name="rokweather-sources">
+        <fieldset name="wunderground" addfieldpath="/modules/mod_rokweather/fields">
+            <field name="spacer" type="break" default=""
+                   label="Wunderground Settings"
+                   description="" class="source wunderground"/>
+            <field name="wunderground_default_location" type="text" default="Golden, CO"
+                   label="ROKWEATHER_WUNDERGROUND_LABEL_DEFAULT_LOCATION"
+                   description="ROKWEATHER_WUNDERGROUND_DESC_DEFAULT_LOCATION" class="source wunderground"/>
+            <field name="wunderground_location_override" type="text" default=""
+                   label="ROKWEATHER_WUNDERGROUND_LABEL_LOCATION_DISPLAY_OVERRIDE"
+                   description="ROKWEATHER_WUNDERGROUND_DESC_LOCATION_DISPLAY_OVERRIDE" class="source wunderground"/>
+            <field name="cookiesinfowunderground" type="message"
+                   label="* If you have cookies enabled; Cookies must be cleared for the changes to take effect."
+                   default="" description="" class="source wunderground rok-message-notice"/>
+            <field name="wunderground_api_key" type="text" default="" label="ROKWEATHER_WUNDERGROUND_LABEL_API_KEY"
+                   description="ROKWEATHER_WUNDERGROUND_DESC_API_KEY" class="source wunderground"/>
+            <field name="wundergroundapilink" type="message" default=""
+                   label="** You must enter an API Key for Wunderground: &lt;a href=&quot;http://www.wunderground.com/weather/api/&quot; target=&quot;_blank&quot;&gt;Apply for Wunderground API Key&lt;/a&gt;"
+                   description="" class="source wunderground rok-message-success"/>
+            <field name="wunderground_forecast_show" type="list" default="4" label="ROKWEATHER_LABEL_FORECASTS_SHOWN"
+                   description="ROKWEATHER_DESC_FORECASTS_SHOWN" class="source wunderground">
+                <option value="1">ROKWEATHER_DEGREES_DAYS_1</option>
+                <option value="2">ROKWEATHER_DEGREES_DAYS_2</option>
+                <option value="3">ROKWEATHER_DEGREES_DAYS_3</option>
+                <option value="4">ROKWEATHER_DEGREES_DAYS_4</option>
+            </field>
+            <field name="wunderground_logo_style" type="list" default="black" label="ROKWEATHER_WUNDERGROUND_LABEL_LOGO_STYLE"
+                   description="ROKWEATHER_WUNDERGROUND_DESC_LOGO_STYLE" class="source wunderground">
+                <option value="black">ROKWEATHER_WUNDERGROUND_LOGO_STYLE_DARK</option>
+                <option value="white">ROKWEATHER_WUNDERGROUND_LOGO_STYLE_LIGHT</option>
+            </field>
+            <field name="wundergroundlogoinline" type="wundergroundlogo" default=""
+                   label="Wunderground Logo"
+                   description="" class="source wunderground rok-wunderground-logo"/>
+        </fieldset>
+    </subfields>
+</form>
