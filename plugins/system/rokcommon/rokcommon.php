@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: rokcommon.php 10833 2013-05-29 19:32:19Z btowles $
+ * @version   $Id: rokcommon.php 58568 2012-12-04 14:20:40Z steph $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 

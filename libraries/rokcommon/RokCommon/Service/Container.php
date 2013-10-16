@@ -15,7 +15,7 @@
  * @package    symfony
  * @subpackage dependency_injection
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: Container.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version    SVN: $Id: Container.php 57540 2012-10-14 18:27:59Z btowles $
  */
 interface RokCommon_Service_Container
 {

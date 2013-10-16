@@ -15,7 +15,7 @@
  * @package    symfony
  * @subpackage dependency_injection
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: AbstractDumper.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version    SVN: $Id: AbstractDumper.php 48519 2012-02-03 23:18:52Z btowles $
  */
 abstract class RokCommon_Service_Container_AbstractDumper implements RokCommon_Service_Container_Dumper
 {

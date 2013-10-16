@@ -144,8 +144,7 @@ body table.adminform th {
 }
 
 .rokinstall-failure .rokinstall-errormsg {
-	text-indent:0;
-	margin-left:42px;
+	text-indent:42px;
 	display:block;
 	padding-bottom: 10px;
 	color:#bd4648;

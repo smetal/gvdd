@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: State.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version   $Id: State.php 53534 2012-06-06 18:21:34Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  *
  * Original Copyright below
@@ -36,7 +36,7 @@ Contributor(s):
 See: http://smc.sourceforge.net/
 
 RCS ID
-$Id: State.php 10831 2013-05-29 19:32:17Z btowles $
+$Id: State.php 53534 2012-06-06 18:21:34Z btowles $
 
 CHANGE LOG
 $Log: statemap.php,v $

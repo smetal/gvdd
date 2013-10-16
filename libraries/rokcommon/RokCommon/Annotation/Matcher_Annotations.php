@@ -1,8 +1,8 @@
 <?php
 /**
- * @version                                             $Id: Matcher_Annotations.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version                                             $Id: Matcher_Annotations.php 53534 2012-06-06 18:21:34Z btowles $
  * @author                                              RocketTheme http://www.rockettheme.com
- * @copyright                                           Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright                                           Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license                                             http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  *
  * Based on Addendum

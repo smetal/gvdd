@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: Collection.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version   $Id: Collection.php 58925 2013-01-22 19:43:13Z steph $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: Compiler.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version   $Id: RokCommon_Less_Compiler.class.php 4060 2012-10-02 18:03:24Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 defined('ROKCOMMON') or die();

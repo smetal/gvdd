@@ -15,7 +15,7 @@
  * @package    symfony
  * @subpackage dependency_injection
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: Xml.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version    SVN: $Id: Xml.php 59194 2013-03-06 23:58:29Z btowles $
  */
 class RokCommon_Service_Container_Loader_File_Xml extends RokCommon_Service_Container_Loader_File
 {

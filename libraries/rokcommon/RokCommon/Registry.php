@@ -1,6 +1,6 @@
 <?php
 /**
- * @version        $Id: Registry.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version        $Id: Registry.php 53534 2012-06-06 18:21:34Z btowles $
  * @package        Joomla.Framework
  * @subpackage    Registry
  * @copyright    Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.

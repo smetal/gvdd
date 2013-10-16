@@ -1,6 +1,6 @@
 <?php
 /*
- *  $Id: Builder.php 10831 2013-05-29 19:32:17Z btowles $
+ *  $Id: Builder.php 48519 2012-02-03 23:18:52Z btowles $
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -679,7 +679,7 @@ class Doctrine_Import_Builder extends Doctrine_Builder
         $ret[] = '@package    ' . $this->_phpDocPackage;
         $ret[] = '@subpackage ' . $this->_phpDocSubpackage;
         $ret[] = '@author     ' . $this->_phpDocName . ' <' . $this->_phpDocEmail . '>';
-        $ret[] = '@version    SVN: $Id: Builder.php 10831 2013-05-29 19:32:17Z btowles $';
+        $ret[] = '@version    SVN: $Id: Builder.php 48519 2012-02-03 23:18:52Z btowles $';
 
         $ret = ' * ' . implode(PHP_EOL . ' * ', $ret);
         $ret = ' ' . trim($ret);

@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: FileFinder.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version   $Id: FileFinder.php 57986 2012-11-02 18:14:04Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 

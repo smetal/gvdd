@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: include.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version   $Id: include.php 58670 2012-12-24 16:41:31Z steph $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 if (!defined('ROKCOMMON')) {

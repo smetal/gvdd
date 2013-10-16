@@ -15,7 +15,7 @@
  * @package    symfony
  * @subpackage dependency_injection
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: Builder.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version    SVN: $Id: Builder.php 48519 2012-02-03 23:18:52Z btowles $
  */
 class RokCommon_Service_Container_Builder extends RokCommon_Service_ContainerImpl
 {

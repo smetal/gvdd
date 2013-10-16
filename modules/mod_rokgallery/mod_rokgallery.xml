@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+    <name>RokGallery Module</name>
+    <creationDate>May 27, 2013</creationDate>
+    <author>RocketTheme, LLC</author>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <copyright>(C) 2005 - 2013 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>2.27</version>
+    <description>Module for displaying RokGallery</description>
+
+    <files>
+        <filename module="mod_rokgallery">mod_rokgallery.php</filename>
+        <filename>index.html</filename>
+        <filename>include.php</filename>
+        <filename>CHANGELOG.php</filename>
+        <folder>lib</folder>
+        <folder>templates</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages folder="language/en-GB">
+        <language tag="en-GB">en-GB.mod_rokgallery.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/components/com_rokgallery/fields">
+                <field name="gallery_id" type="gallery" label="ROKGALLERY_LABEL_GALLERY"
+                       description="ROKGALLERY_DESC_GALLERY"/>
+                <field name="link" type="list" default="0" label="ROKGALLERY_LABEL_LINKTYPE"
+                       description="ROKGALLERY_DESC_LINKTYPE">
+                    <option value="none">ROKGALLERY_LINK_NONE</option>
+                    <option value="slice_link">ROKGALLERY_SLICE_LINK</option>
+                    <option value="rokbox2">ROKGALLERY_ROKBOX2_LINK</option>
+                    <option value="rokbox2_full">ROKGALLERY_ROKBOX2_LINK_FULL</option>
+                    <option value="rokbox">ROKGALLERY_ROKBOX_LINK</option>
+                    <option value="rokbox_full">ROKGALLERY_ROKBOX_LINK_FULL</option>
+                </field>
+                <field name="default_menuitem" type="menuitem" default="0" label="DEFAULT_LABEL_MENU_ITEM"
+                       description="DEFAULT_DESC_MENU_ITEM"/>
+                <field name="title" type="list" default="false" label="ROKGALLERY_LABEL_TITLE"
+                       description="ROKGALLERY_DESC_TITLE">
+                    <option value="1">ROKGALLERY_YES</option>
+                    <option value="0">ROKGALLERY_NO</option>
+                </field>
+                <field name="caption" type="list" default="false" label="ROKGALLERY_LABEL_CAPTION"
+                       description="ROKGALLERY_DESC_CAPTION">
+                    <option value="1">ROKGALLERY_YES</option>
+                    <option value="0">ROKGALLERY_NO</option>
+                </field>
+                <field name="sort_by" type="list" default="gallery_ordering" label="ROKGALLERY_LABEL_SORT_BY"
+                       description="ROKGALLERY_DESC_SORT_BY">
+                    <option value="gallery_ordering">ROKGALLERY_SORT_GALLERY_ORDERING</option>
+                    <option value="slice_title">ROKGALLERY_SORT_TITLE</option>
+                    <option value="slice_updated_at">ROKGALLERY_SORT_UPDATED</option>
+                    <option value="file_created_at">ROKGALLERY_SORT_CREATED</option>
+                    <option value="loves">ROKGALLERY_SORT_LOVES</option>
+                    <option value="views">ROKGALLERY_SORT_VIEWS</option>
+                    <option value="random">ROKGALLERY_SORT_RANDOM</option>
+                </field>
+                <field name="sort_direction" type="list" default="ASC" label="ROKGALLERY_LABEL_SORT_DIRECTION"
+                       description="ROKGALLERY_DESC_SORT_DIRECTION">
+                    <option value="ASC">Ascending</option>
+                    <option value="DESC">Descending</option>
+                </field>
+                <field name="limit_count" type="text" default="10" size="7" label="ROKGALLERY_LABEL_LIMIT"
+                       description="ROKGALLERY_DESC_LIMIT"/>
+                <field name="css_style" type="list" default="light" label="ROKGALLERY_LABEL_STYLE"
+                       description="ROKGALLERY_DESC_STYLE">
+                    <option value="light">ROKGALLERY_LIGHT</option>
+                    <option value="dark">ROKGALLERY_DARK</option>
+                </field>
+                <field name="layout" type="layout" default="grid" label="ROKGALLERY_LABEL_LAYOUT"
+                       description="ROKGALLERY_DESC_LAYOUT">
+                    <option value="grid" fixed="false">ROKGALLERY_LAYOUT_GRID</option>
+                    <option value="slideshow" fixed="true">ROKGALLERY_LAYOUT_SLIDESHOW</option>
+                    <option value="showcase" fixed="true">ROKGALLERY_LAYOUT_SHOWCASE</option>
+                    <option value="showcase_responsive" fixed="true">ROKGALLERY_LAYOUT_SHOWCASE_RESPONSIVE</option>
+                </field>
+                <field name="spacer_gridsettings" type="break"
+                       label="Grid Settings"
+                       description="" class="grid layout"/>
+
+                <field name="columns" type="text" default="1" label="ROKGALLERY_LABEL_COLUMNS"
+                       description="ROKGALLERY_DESC_COLUMNS" class="grid layout"/>
+
+                <field name="spacer_slideshowsettings" type="break"
+                       label="Slideshow Settings"
+                       description="" class="slideshow layout"/>
+                <field name="arrows" type="list" default="onhover" label="ROKGALLERY_LABEL_ARROWS"
+                       description="ROKGALLERY_DESC_ARROWS" class="slideshow layout">
+                    <option value="yes">ROKGALLERY_YES</option>
+                    <option value="no">ROKGALLERY_NO</option>
+                    <option value="onhover">ROKGALLERY_HOVER</option>
+                </field>
+                <field name="navigation" type="list" default="thumbnails" label="ROKGALLERY_LABEL_NAVIGATION"
+                       description="ROKGALLERY_DESC_NAVIGATION" class="slideshow layout">
+                    <option value="thumbnails">ROKGALLERY_THUMBNAILS</option>
+                    <option value="none">ROKGALLERY_NONE</option>
+                </field>
+                <field name="animation_type" type="list" default="random" label="ROKGALLERY_LABEL_ANIMATION_TYPE"
+                       description="ROKGALLERY_DESC_ANIMATION_TYPE" class="slideshow layout">
+                    <option value="random">Random</option>
+                    <option value="crossfade">Crossfade</option>
+                    <option value="blindsRight">Blinds To Right</option>
+                    <option value="blindsLeft">Blinds To Left</option>
+                    <option value="blindsDownLeft">Blinds To Down Left</option>
+                    <option value="blindsDownRight">Blinds To Down Right</option>
+                    <option value="blindsMirrorIn">Blinds Mirror Out to In</option>
+                    <option value="blindsMirrorOut">Blinds Mirror In to Out</option>
+                    <option value="blindsRandom">Blinds Randomized</option>
+                    <option value="boxesRight">Boxes To Right</option>
+                    <option value="boxesLeft">Boxes To Left</option>
+                    <option value="boxesOpacityRight">Boxes Opacity To Right</option>
+                    <option value="boxesOpacityLeft">Boxes Opacity To Left</option>
+                    <option value="boxesMirror">Boxes Mirror</option>
+                    <option value="boxesRandom">Boxes Randomized</option>
+                    <option value="slideDown">Slide Down</option>
+                    <option value="slideUp">Slide Up</option>
+                    <option value="slideLeft">Slide Left</option>
+                    <option value="slideRight">Slide Right</option>
+                </field>
+                <field name="animation_duration" type="text" default="500" label="ROKGALLERY_LABEL_ANIMATION_DURATION"
+                       description="ROKGALLERY_DESC_ANIMATION_DURATION" class="slideshow layout"/>
+                <field name="autoplay_enabled" type="list" default="0" label="ROKGALLERY_LABEL_AUTOPLAY_ENABLED"
+                       description="ROKGALLERY_DESC_AUTOPLAY_ENABLED" class="slideshow layout">
+                    <option value="1">ROKGALLERY_ENABLED</option>
+                    <option value="2">ROKGALLERY_ENABLED_WITH_PROGRESS</option>
+                    <option value="0">ROKGALLERY_DISABLED</option>
+                </field>
+                <field name="autoplay_delay" type="text" default="7" label="ROKGALLERY_LABEL_AUTOPLAY_DURATION"
+                       description="ROKGALLERY_LABEL_AUTOPLAY_DURATION" class="slideshow layout"/>
+
+
+                <field name="spacer_showcasesettings" type="break"
+                       label="Fixed Showcase Settings"
+                       description="" class="showcase layout"/>
+                <field name="showcase_arrows" type="list" default="onhover" label="ROKGALLERY_LABEL_ARROWS"
+                       description="ROKGALLERY_DESC_ARROWS" class="showcase layout">
+                    <option value="yes">ROKGALLERY_YES</option>
+                    <option value="no">ROKGALLERY_NO</option>
+                    <option value="onhover">ROKGALLERY_HOVER</option>
+                </field>
+                <!--<field name="showcase_navigation" type="list" default="thumbnails" label="ROKGALLERY_LABEL_NAVIGATION"
+                           description="ROKGALLERY_DESC_NAVIGATION" class="showcase layout">
+                        <option value="thumbnails">ROKGALLERY_THUMBNAILS</option>
+                        <option value="pagination">ROKGALLERY_PAGINATION</option>
+                        <option value="none">ROKGALLERY_NONE</option>
+                    </field>-->
+                <field name="showcase_image_position" type="list" default="left"
+                       label="ROKGALLERY_LABEL_SHOWCASE_IMAGEPOSITION"
+                       description="ROKGALLERY_DESC_SHOWCASE_IMAGEPOSITION" class="showcase layout">
+                    <option value="left">ROKGALLERY_LEFT</option>
+                    <option value="right">ROKGALLERY_RIGHT</option>
+                </field>
+                <field name="showcase_imgpadding" type="text" default="0" label="ROKGALLERY_LABEL_SHOWCASE_IMGPADDING"
+                       description="ROKGALLERY_DESC_SHOWCASE_IMGPADDING" class="showcase layout"/>
+                <!--<field name="showcase_fixedheight" type="list" default="0" label="ROKGALLERY_LABEL_SHOWCASE_FIXEDHEIGHT" description="ROKGALLERY_DESC_SHOWCASE_FIXEDHEIGHT" class="showcase layout">
+                        <option value="1">ROKGALLERY_YES</option>
+                        <option value="0">ROKGALLERY_NO</option>
+                    </field>
+                    <field name="showcase_animatedheight" type="list" default="1" label="ROKGALLERY_LABEL_SHOWCASE_ANIMATEDHEIGHT" description="ROKGALLERY_DESC_SHOWCASE_ANIMATEDHEIGHT" class="showcase layout">
+                        <option value="1">ROKGALLERY_YES</option>
+                        <option value="0">ROKGALLERY_NO</option>
+                    </field>-->
+                <field name="showcase_animation_type" type="list" default="random"
+                       label="ROKGALLERY_LABEL_SLICEANIMATION_TYPE"
+                       description="ROKGALLERY_DESC_SLICEANIMATION_TYPE" class="showcase layout">
+                    <option value="random">Random</option>
+                    <option value="crossfade">Crossfade</option>
+                    <option value="blindsRight">Blinds To Right</option>
+                    <option value="blindsLeft">Blinds To Left</option>
+                    <option value="blindsDownLeft">Blinds To Down Left</option>
+                    <option value="blindsDownRight">Blinds To Down Right</option>
+                    <option value="blindsMirrorIn">Blinds Mirror Out to In</option>
+                    <option value="blindsMirrorOut">Blinds Mirror In to Out</option>
+                    <option value="blindsRandom">Blinds Randomized</option>
+                    <option value="boxesRight">Boxes To Right</option>
+                    <option value="boxesLeft">Boxes To Left</option>
+                    <option value="boxesOpacityRight">Boxes Opacity To Right</option>
+                    <option value="boxesOpacityLeft">Boxes Opacity To Left</option>
+                    <option value="boxesMirror">Boxes Mirror</option>
+                    <option value="boxesRandom">Boxes Randomized</option>
+                    <option value="slideDown">Slide Down</option>
+                    <option value="slideUp">Slide Up</option>
+                    <option value="slideLeft">Slide Left</option>
+                    <option value="slideRight">Slide Right</option>
+                </field>
+                <field name="showcase_captionsanimation" type="list" default="crossfade"
+                       label="ROKGALLERY_LABEL_CAPTIONSANIMATION_TYPE"
+                       description="ROKGALLERY_DESC_CAPTIONSANIMATION_TYPE" class="showcase layout">
+                    <option value="crossfade">Crossfade</option>
+                    <option value="topdown">Top Down</option>
+                    <option value="bottomup">Bottom Up</option>
+                </field>
+                <field name="showcase_animation_duration" type="text" default="500"
+                       label="ROKGALLERY_LABEL_ANIMATION_DURATION"
+                       description="ROKGALLERY_DESC_ANIMATION_DURATION" class="showcase layout"/>
+
+                <field name="showcase_autoplay_enabled" type="list" default="0"
+                       label="ROKGALLERY_LABEL_AUTOPLAY_ENABLED"
+                       description="ROKGALLERY_DESC_SHOWCASE_AUTOPLAY_ENABLED" class="showcase layout">
+                    <option value="1">ROKGALLERY_ENABLED</option>
+                    <option value="0">ROKGALLERY_DISABLED</option>
+                </field>
+                <field name="showcase_autoplay_delay" type="text" default="7" label="ROKGALLERY_LABEL_AUTOPLAY_DURATION"
+                       description="ROKGALLERY_LABEL_AUTOPLAY_DURATION" class="showcase layout"/>
+
+                <field name="spacer_showcase_responsivesettings" type="break"
+                       label="Responsive Showcase Settings"
+                       description="" class="showcase_responsive layout"/>
+                <field name="showcase_responsive_arrows" type="list" default="onhover" label="ROKGALLERY_LABEL_ARROWS"
+                       description="ROKGALLERY_DESC_ARROWS" class="showcase_responsive layout">
+                    <option value="yes">ROKGALLERY_YES</option>
+                    <option value="no">ROKGALLERY_NO</option>
+                    <option value="onhover">ROKGALLERY_HOVER</option>
+                </field>
+                <!--<field name="showcase_responsive_navigation" type="list" default="thumbnails" label="ROKGALLERY_LABEL_NAVIGATION"
+                           description="ROKGALLERY_DESC_NAVIGATION" class="showcase_responsive layout">
+                        <option value="thumbnails">ROKGALLERY_THUMBNAILS</option>
+                        <option value="pagination">ROKGALLERY_PAGINATION</option>
+                        <option value="none">ROKGALLERY_NONE</option>
+                    </field>-->
+                <field name="showcase_responsive_image_position" type="list" default="left"
+                       label="ROKGALLERY_LABEL_SHOWCASE_IMAGEPOSITION"
+                       description="ROKGALLERY_DESC_SHOWCASE_IMAGEPOSITION" class="showcase_responsive layout">
+                    <option value="left">ROKGALLERY_LEFT</option>
+                    <option value="right">ROKGALLERY_RIGHT</option>
+                </field>
+                <field name="showcase_responsive_imgpadding" type="text" default="0"
+                       label="ROKGALLERY_LABEL_SHOWCASE_IMGPADDING" description="ROKGALLERY_DESC_SHOWCASE_IMGPADDING"
+                       class="showcase_responsive layout"/>
+                <!--<field name="showcase_responsive_fixedheight" type="list" default="0" label="ROKGALLERY_LABEL_SHOWCASE_FIXEDHEIGHT" description="ROKGALLERY_DESC_SHOWCASE_FIXEDHEIGHT" class="showcase_responsive layout">
+                        <option value="1">ROKGALLERY_YES</option>
+                        <option value="0">ROKGALLERY_NO</option>
+                    </field>
+                    <field name="showcase_responsive_animatedheight" type="list" default="1" label="ROKGALLERY_LABEL_SHOWCASE_ANIMATEDHEIGHT" description="ROKGALLERY_DESC_SHOWCASE_ANIMATEDHEIGHT" class="showcase_responsive layout">
+                        <option value="1">ROKGALLERY_YES</option>
+                        <option value="0">ROKGALLERY_NO</option>
+                    </field>-->
+                <field name="showcase_responsive_animation_type" type="list" default="random"
+                       label="ROKGALLERY_LABEL_SLICEANIMATION_TYPE"
+                       description="ROKGALLERY_DESC_SLICEANIMATION_TYPE" class="showcase_responsive layout">
+                    <option value="random">Random</option>
+                    <option value="crossfade">Crossfade</option>
+                    <option value="blindsRight">Blinds To Right</option>
+                    <option value="blindsLeft">Blinds To Left</option>
+                    <option value="blindsDownLeft">Blinds To Down Left</option>
+                    <option value="blindsDownRight">Blinds To Down Right</option>
+                    <option value="blindsMirrorIn">Blinds Mirror Out to In</option>
+                    <option value="blindsMirrorOut">Blinds Mirror In to Out</option>
+                    <option value="blindsRandom">Blinds Randomized</option>
+                    <option value="boxesRight">Boxes To Right</option>
+                    <option value="boxesLeft">Boxes To Left</option>
+                    <option value="boxesOpacityRight">Boxes Opacity To Right</option>
+                    <option value="boxesOpacityLeft">Boxes Opacity To Left</option>
+                    <option value="boxesMirror">Boxes Mirror</option>
+                    <option value="boxesRandom">Boxes Randomized</option>
+                    <option value="slideDown">Slide Down</option>
+                    <option value="slideUp">Slide Up</option>
+                    <option value="slideLeft">Slide Left</option>
+                    <option value="slideRight">Slide Right</option>
+                </field>
+                <field name="showcase_responsive_captionsanimation" type="list" default="crossfade"
+                       label="ROKGALLERY_LABEL_CAPTIONSANIMATION_TYPE"
+                       description="ROKGALLERY_DESC_CAPTIONSANIMATION_TYPE" class="showcase_responsive layout">
+                    <option value="crossfade">Crossfade</option>
+                    <option value="topdown">Top Down</option>
+                    <option value="bottomup">Bottom Up</option>
+                </field>
+                <field name="showcase_responsive_animation_duration" type="text" default="500"
+                       label="ROKGALLERY_LABEL_ANIMATION_DURATION"
+                       description="ROKGALLERY_DESC_ANIMATION_DURATION" class="showcase_responsive layout"/>
+
+                <field name="showcase_responsive_autoplay_enabled" type="list" default="0"
+                       label="ROKGALLERY_LABEL_AUTOPLAY_ENABLED"
+                       description="ROKGALLERY_DESC_SHOWCASE_AUTOPLAY_ENABLED" class="showcase_responsive layout">
+                    <option value="1">ROKGALLERY_ENABLED</option>
+                    <option value="0">ROKGALLERY_DISABLED</option>
+                </field>
+                <field name="showcase_responsive_autoplay_delay" type="text" default="7"
+                       label="ROKGALLERY_LABEL_AUTOPLAY_DURATION"
+                       description="ROKGALLERY_LABEL_AUTOPLAY_DURATION" class="showcase_responsive layout"/>
+                <field name="backgroundimage" type="media"
+                       label="MOD_CUSTOM_FIELD_BACKGROUNDIMAGE_LABEL"
+                       description="MOD_BACKGROUNDIMAGE_FIELD_LOGO_DESC"/>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+
+                <field name="cache"
+                    type="hidden"
+                    default="0">
+                </field>
+                <field name="module_cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static">
+                    <option
+                        value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

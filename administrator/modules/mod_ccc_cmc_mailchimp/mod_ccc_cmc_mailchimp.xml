@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module"
+        version="2.5"
+        client="administrator"
+        method="upgrade"
+        >
+    <name>CMC - Mailchimp</name>
+    <author>compojoom.com</author>
+    <creationDate>2013-09-26</creationDate>
+    <copyright>Copyright (C) 2012 - compojoom.com. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>daniel@compojoom.com</authorEmail>
+    <authorUrl>compojoom.com</authorUrl>
+    <version>1.4</version>
+    <description>MOD_CCC_CMC_MAILCHIMP_XML_DESCRIPTION</description>
+    <files>
+        <file>helper.php</file>
+<file module="mod_ccc_cmc_mailchimp">mod_ccc_cmc_mailchimp.php</file>
+<folder>tmpl</folder>
+    </files>
+    <languages folder="administrator/language">
+        <language tag="de-DE">de-DE/de-DE.mod_ccc_cmc_mailchimp.ini</language>
+<language tag="en-GB">en-GB/en-GB.mod_ccc_cmc_mailchimp.ini</language>
+<language tag="es-ES">es-ES/es-ES.mod_ccc_cmc_mailchimp.ini</language>
+<language tag="nl-NL">nl-NL/nl-NL.mod_ccc_cmc_mailchimp.ini</language>
+<language tag="pl-PL">pl-PL/pl-PL.mod_ccc_cmc_mailchimp.ini</language>
+<language tag="pt-BR">pt-BR/pt-BR.mod_ccc_cmc_mailchimp.ini</language>
+    </languages>
+    <help key="CCC_MODULE_PROMOTION" />
+    <config>
+        <fields name="params">
+
+        </fields>
+    </config>
+</extension>

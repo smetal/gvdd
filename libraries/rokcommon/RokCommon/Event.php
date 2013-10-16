@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: Event.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version   $Id: Event.php 53534 2012-06-06 18:21:34Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  *
  * Derived From:
@@ -21,7 +21,7 @@ defined('ROKCOMMON') or die;
  * @package    symfony
  * @subpackage event_dispatcher
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: Event.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version    SVN: $Id: Event.php 53534 2012-06-06 18:21:34Z btowles $
  */
 class RokCommon_Event implements ArrayAccess
 {

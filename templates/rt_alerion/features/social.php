@@ -28,22 +28,22 @@ class GantryFeatureSocial extends GantryFeature {
 				<span class="rt-social-text"><?php echo $gantry->get('social-text'); ?></span>
 			<?php endif; ?>
 			<?php if ($gantry->get('social-facebook') != "") : ?>
-			<a class="social-button rt-facebook-btn" href="<?php echo $gantry->get('social-facebook'); ?>">
+			<a class="social-button rt-facebook-btn" target="_blank" href="<?php echo $gantry->get('social-facebook'); ?>">
 				<span class="icon-facebook"></span>
 			</a>
 			<?php endif; ?>
 			<?php if ($gantry->get('social-twitter') != "") : ?>
-			<a class="social-button rt-twitter-btn" href="<?php echo $gantry->get('social-twitter'); ?>">
+			<a class="social-button rt-twitter-btn" target="_blank" href="<?php echo $gantry->get('social-twitter'); ?>">
 				<span class="icon-twitter"></span>
 			</a>
 			<?php endif; ?>
 			<?php if ($gantry->get('social-google') != "") : ?>
-			<a class="social-button rt-google-btn" href="<?php echo $gantry->get('social-google'); ?>">
+			<a class="social-button rt-google-btn" target="_blank" href="<?php echo $gantry->get('social-google'); ?>">
 				<span class="icon-google-plus"></span>
 			</a>
 			<?php endif; ?>
 			<?php if ($gantry->get('social-rss') != "") : ?>
-			<a class="social-button rt-rss-btn" href="<?php echo $gantry->get('social-rss'); ?>">
+			<a class="social-button rt-rss-btn" target="_blank" href="<?php echo $gantry->get('social-rss'); ?>">
 				<span class="icon-rss"></span>
 			</a>
 			<?php endif; ?>

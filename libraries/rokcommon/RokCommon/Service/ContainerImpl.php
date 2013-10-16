@@ -40,7 +40,7 @@
  * @package    symfony
  * @subpackage dependency_injection
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: ContainerImpl.php 10831 2013-05-29 19:32:17Z btowles $
+ * @version    SVN: $Id: ContainerImpl.php 57540 2012-10-14 18:27:59Z btowles $
  */
 class RokCommon_Service_ContainerImpl implements RokCommon_Service_Container, ArrayAccess, Iterator
 {

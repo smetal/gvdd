@@ -1,8 +1,8 @@
 <?php
 /**
- * @version   $Id: RokCommon_Config_Form.php 10833 2013-05-29 19:32:19Z btowles $
+ * @version   $Id: RokCommon_Config_Form.php 52458 2012-04-10 20:58:04Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 
